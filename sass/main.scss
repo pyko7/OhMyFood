@@ -1,0 +1,40 @@
+@import "./base/settings.scss";  //root of website
+@import "./base/responsive.scss"; //import media queries
+@import "./pages/home.scss"; //import scss of home page
+@import "./components/items.scss"; //import items page
+
+
+header{
+    width: 100%;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    a{
+        display: flex;
+        justify-content: center;
+    }
+    .main-logo{
+        width: 80%;
+    }
+    
+    @include medium-screen{
+        height: 80px;
+        
+        .main-logo{
+            width: 100%;
+        }
+    }
+
+    @include large-screen{
+        height: 80px;
+    
+        .main-logo{
+            width: 100%;
+        }
+    }
+}
+
+
+// font-family: 'Shrikhand', cursive;

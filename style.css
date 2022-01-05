@@ -1,0 +1,323 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.section-city-name {
+  /*section for icon, name of city*/
+  width: 100%;
+  padding: 15px 0;
+  background-color: #ebe9e9;
+  box-shadow: 0 1px 4px #c2c1c1 inset;
+  /*inset for shadow inside*/
+}
+
+.city-name-container {
+  /*container of icon, name of city*/
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  font-weight: 700;
+}
+.city-name-container .fa-map-marker-alt {
+  margin-right: 5%;
+}
+@media screen and (min-width: 768px) {
+  .city-name-container {
+    width: 25%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .city-name-container {
+    width: 15%;
+  }
+}
+
+.section-information {
+  /*section with informations + explore button*/
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(204, 204, 204, 0.267);
+}
+
+.information-container {
+  /*container for informations + explore button*/
+  width: 90%;
+  padding: 35px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.information-container h1 {
+  width: 70%;
+  font-size: 24px;
+  margin-bottom: 10px;
+  font-weight: 900;
+}
+.information-container p {
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+.information-container button {
+  margin-bottom: 20px;
+}
+
+.section-website-working {
+  width: 100%;
+}
+
+.working-container {
+  width: 100%;
+  padding: 40px 20px;
+}
+.working-container h1 {
+  margin-bottom: 25px;
+}
+@media screen and (min-width: 768px) {
+  .working-container {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 992px) {
+  .working-container {
+    max-width: 60%;
+    margin: 0 auto;
+  }
+}
+
+.working-card {
+  width: 95%;
+  margin: 25px auto;
+  padding: 20px;
+  border-radius: 15px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 1px 1px 6px #b8b8b8;
+}
+.working-card i {
+  position: absolute;
+  right: 70%;
+  margin-right: 50px;
+  color: #797979;
+  font-size: 18px;
+}
+@media screen and (min-width: 768px) {
+  .working-card i {
+    right: 60%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .working-card i {
+    right: 60%;
+  }
+}
+.working-card:nth-child(4) {
+  /*select last card*/
+  background-color: rgba(204, 204, 204, 0.267);
+}
+.working-card:nth-child(4) i {
+  color: #9356DC;
+}
+
+.working-stage-number {
+  position: absolute;
+  padding: 4px 8px;
+  color: #fff;
+  text-align: center;
+  background: #9356DC;
+  border-radius: 50%;
+  left: -12px;
+}
+
+.working-stage-title {
+  font-weight: 700;
+}
+
+.section-restaurant {
+  width: 100%;
+}
+
+.restaurant-container {
+  width: 100%;
+  padding: 40px 20px;
+  padding-bottom: 40px;
+  background: rgba(204, 204, 204, 0.267);
+}
+.restaurant-container h1 {
+  margin-bottom: 25px;
+}
+@media screen and (min-width: 992px) {
+  .restaurant-container {
+    margin: 0 auto;
+    padding: 40px 50px;
+    width: 80%;
+    border-radius: 30px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .restaurant-card-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.restaurant-card {
+  position: relative;
+  max-height: 250px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 1px 1px 6px #b8b8b8;
+}
+.restaurant-card img {
+  display: block;
+  width: 100%;
+  max-height: 170px;
+  object-fit: cover;
+  object-position: 50% 100%;
+}
+.restaurant-card img.restaurant-img-position {
+  /*la note enchanté img position*/
+  object-position: 50% 60%;
+}
+.restaurant-card i {
+  font-size: 26px;
+  display: block;
+}
+@media screen and (min-width: 768px) {
+  .restaurant-card {
+    height: 400px;
+  }
+  .restaurant-card img {
+    height: 300px;
+    object-position: 50% 85%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .restaurant-card {
+    width: 40%;
+    margin-bottom: 50px;
+    height: 500px;
+  }
+  .restaurant-card:hover {
+    background: rgba(204, 204, 204, 0.267);
+    box-shadow: 3px 4px 5px #848383;
+  }
+  .restaurant-card img {
+    height: 400px;
+    object-position: 50% 65%;
+  }
+  .restaurant-card i:hover {
+    background-color: #9356DC;
+  }
+}
+
+.restaurant-description {
+  width: 100%;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.restaurant-name {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 3px;
+}
+
+.restaurant-district {
+  font-size: 18px;
+}
+
+.big-button {
+  /*explore + order btns*/
+  padding: 15px;
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  border-radius: 25px;
+  background: #9356DC;
+  background: linear-gradient(354deg, #9356DC 2%, #9657dc 4%, #FF79DA 81%);
+  box-shadow: 1px 2px 6px #919090;
+}
+@media screen and (min-width: 768px) {
+  .big-button {
+    max-width: 250px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .big-button {
+    max-width: 250px;
+    cursor: pointer;
+  }
+  .big-button:hover {
+    filter: brightness(105%);
+    /*button a bit brighter on hover*/
+    box-shadow: 3px 4px 5px #848383;
+  }
+}
+
+.new-restaurant {
+  /*used for new restaurants in the list*/
+  position: absolute;
+  right: 10px;
+  top: 15px;
+  padding: 8px 15px;
+  border-radius: 2px;
+  background: #99E2D0;
+  color: #278870;
+  font-weight: bold;
+}
+
+header {
+  width: 100%;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header a {
+  display: flex;
+  justify-content: center;
+}
+header .main-logo {
+  width: 80%;
+}
+@media screen and (min-width: 768px) {
+  header {
+    height: 80px;
+  }
+  header .main-logo {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 992px) {
+  header {
+    height: 80px;
+  }
+  header .main-logo {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

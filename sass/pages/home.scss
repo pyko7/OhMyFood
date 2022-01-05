@@ -1,0 +1,238 @@
+//*****************SECTION NAME OF CITY*********
+.section-city-name{ /*section for icon, name of city*/
+    width: 100%;
+    padding: 15px 0;
+    background-color: rgb(235, 233, 233);
+    box-shadow: 0 1px 4px rgb(194, 193, 193) inset; /*inset for shadow inside*/
+}
+
+.city-name-container{ /*container of icon, name of city*/
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    font-weight: 700;
+
+        .fa-map-marker-alt{
+            margin-right: 5%;
+        }
+
+    @include medium-screen{
+        width: 25%;
+
+    }
+    @include large-screen{
+        width: 15%;
+    }
+}
+
+//*****************SECTION INFORMATIONS OF WEBSITE*********
+.section-information{ /*section with informations + explore button*/
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $background-lighter;
+}
+
+.information-container{ /*container for informations + explore button*/
+    width: 90%;
+    padding: 35px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+        h1{
+            width: 70%;
+            font-size: 24px;
+            margin-bottom: 10px;
+            font-weight: 900;
+        }
+
+        p{
+            font-size: 18px;
+            margin-bottom: 25px;
+        }
+        
+        button{
+            margin-bottom: 20px;
+        }
+}
+
+//*****************SECTION STAGES OF WORKING*********
+.section-website-working{
+    width: 100%;
+}
+
+.working-container{
+    width: 100%;
+    padding: 40px 20px;
+
+    h1{
+        margin-bottom: 25px;
+    }
+    @include medium-screen{
+        width: 90%;
+        margin: 0 auto;
+    }
+    
+    @include large-screen{
+        max-width: 60%; //if below -> icons on text
+        margin: 0 auto;
+    }
+}
+
+.working-card{
+    width: 95%;
+    margin: 25px auto;
+    padding: 20px;
+    border-radius: 15px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow:$cards-box-shadow;
+    
+        & i{
+            position: absolute;
+            right: 70%;
+            margin-right: 50px;
+            color: $icon-color;
+            font-size: 18px;
+
+            @include medium-screen{
+            right: 60%;
+            }
+            
+            @include large-screen{
+                right: 60%;
+
+            }
+        }
+
+        &:nth-child(4){ /*select last card*/
+            background-color: $background-lighter;
+            
+            & i{
+                color: $primary-color;
+            }
+        }
+}
+
+.working-stage-number{
+    position: absolute;
+    padding: 4px 8px;
+    color: #fff;
+    text-align: center;
+    background: $primary-color;
+    border-radius: 50%;
+    left: -12px;
+}
+
+.working-stage-title{
+    font-weight: 700;
+}
+
+//*****************SECTION OF RESTAURANTS*********
+.section-restaurant{
+    width: 100%;
+}
+
+.restaurant-container{
+    width: 100%;
+    padding: 40px 20px;
+    padding-bottom: 40px;
+    background: $background-lighter;
+
+    h1{
+        margin-bottom: 25px;
+    }
+
+    @include large-screen{
+        margin: 0 auto;
+        padding: 40px 50px;
+        width: 80%;
+        border-radius: 30px;
+    }
+}
+
+.restaurant-card-container{
+    @include large-screen{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+
+.restaurant-card{
+    position: relative;
+    max-height: 250px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: $cards-box-shadow;
+    img{
+        display: block;
+        width: 100%;
+        max-height: 170px;
+        object-fit: cover;
+        object-position: 50% 100%;
+        
+        &.restaurant-img-position{ /*la note enchanté img position*/
+            object-position: 50% 60%;
+        }
+    }
+
+    i{
+        font-size: 26px;
+        display: block;
+    }
+
+    @include medium-screen{
+        height: 400px;
+        img{
+            height: 300px;
+            object-position: 50% 85%;
+        }
+    }
+
+    @include large-screen{
+        width: 40%;
+        margin-bottom: 50px;
+        height: 500px;
+        &:hover{
+            background: $background-lighter;
+            box-shadow: $dark-box-shadow;
+        }
+        img{
+            height: 400px;
+            object-position: 50% 65%;
+        }
+
+        i:hover{
+            background-color: $primary-color;
+        }
+
+    }
+}
+
+.restaurant-description{
+    width: 100%;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.restaurant-name{
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 3px;
+}
+
+.restaurant-district{
+    font-size: 18px;
+}

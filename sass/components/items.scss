@@ -1,0 +1,34 @@
+.big-button{ /*explore + order btns*/
+    padding: 15px;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 25px;
+    background: $primary-color;
+    background: linear-gradient(354deg, $primary-color 2%, rgba(150,87,220,1) 4%, $secondary-color 81%);
+    box-shadow: $box-shadow;
+    
+    @include medium-screen{
+        max-width: 250px;
+    }
+    @include large-screen{
+        max-width: 250px;
+        cursor: pointer;
+        
+        &:hover{
+            filter: brightness(105%); /*button a bit brighter on hover*/
+            box-shadow: $dark-box-shadow;
+        }
+    }
+}
+
+.new-restaurant{ /*used for new restaurants in the list*/
+    position: absolute;
+    right: 10px;
+    top: 15px;
+    padding: 8px 15px;
+    border-radius: 2px;
+    background: $tertiary-color;
+    color: darken($tertiary-color, $amount: 40);
+    font-weight: bold;
+}
