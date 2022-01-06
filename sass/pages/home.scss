@@ -14,15 +14,22 @@
     font-weight: 700;
 
         .fa-map-marker-alt{
-            margin-right: 5%;
+            margin-right: 10%;
         }
 
     @include medium-screen{
         width: 25%;
 
+        .fa-map-marker-alt{
+            margin-right: 5%;
+        }
     }
     @include large-screen{
         width: 15%;
+     
+        .fa-map-marker-alt{
+            margin-right: 5%;
+        }
     }
 }
 
@@ -131,6 +138,7 @@
 }
 
 .working-stage-title{
+    font-size: 18px;
     font-weight: 700;
 }
 

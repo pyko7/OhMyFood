@@ -1,7 +1,7 @@
 @import "./base/settings.scss";  //root of website
 @import "./base/responsive.scss"; //import media queries
 
-@import "./layouts/loading-spinner.scss"; //import loading spinner 
+// @import "./layouts/loading-spinner.scss"; //import loading spinner 
 @import "./pages/home.scss"; //import scss of home page
 @import "./components/items.scss"; //import items page
 @import "./utils/mixins.scss"; //import mixins
@@ -42,7 +42,8 @@ header{
 footer{
     width: 100%;
     display: flex;
-    padding: 25px 35px 40px 35px;
+    padding: 25px;
+    padding-bottom: 30px;
     flex-direction: column;
     background-color: #252525;
     color: #fff;
