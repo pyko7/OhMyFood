@@ -1,7 +1,9 @@
 @import "./base/settings.scss";  //root of website
 @import "./base/responsive.scss"; //import media queries
+
 @import "./pages/home.scss"; //import scss of home page
 @import "./components/items.scss"; //import items page
+@import "./utils/mixins.scss"; //import mixins
 
 
 header{

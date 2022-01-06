@@ -227,8 +227,15 @@ a {
     height: 400px;
     object-position: 50% 65%;
   }
-  .restaurant-card i:hover {
-    background-color: #9356DC;
+  .restaurant-card .fa-heart:hover {
+    display: block;
+    color: #9356DC;
+    font-weight: bold;
+    background: linear-gradient(0deg, #FF79DA 61%, #9356DC 96%);
+    -webkit-background-clip: text;
+    /* allows background to be clipped by a text element*/
+    -webkit-text-fill-color: transparent;
+    /*fill color of characters of text*/
   }
 }
 
