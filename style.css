@@ -4,6 +4,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
+  list-style: none;
 }
 
 a {
@@ -324,6 +325,54 @@ header .main-logo {
   }
   header .main-logo {
     width: 100%;
+  }
+}
+
+footer {
+  width: 100%;
+  display: flex;
+  padding: 25px 35px 40px 35px;
+  flex-direction: column;
+  background-color: #252525;
+  color: #fff;
+}
+footer img {
+  width: 30%;
+  margin-bottom: 15px;
+  filter: invert(1);
+  /*put #fff color to logo*/
+}
+footer li {
+  margin: 10px auto;
+}
+footer li i {
+  margin-right: 10px;
+}
+footer .fa-hands-helping {
+  font-size: 10px;
+}
+@media screen and (min-width: 768px) {
+  footer {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  footer img {
+    max-width: 25%;
+  }
+  footer li {
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 992px) {
+  footer {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  footer img {
+    max-width: 25%;
+  }
+  footer li {
+    font-size: 20px;
   }
 }
 

@@ -38,5 +38,56 @@ header{
     }
 }
 
+footer{
+    width: 100%;
+    display: flex;
+    padding: 25px 35px 40px 35px;
+    flex-direction: column;
+    background-color: #252525;
+    color: #fff;
+
+    img{
+        width: 30%;
+        margin-bottom: 15px;
+        filter: invert(1); /*put #fff color to logo*/
+    }
+
+    li{
+        margin: 10px auto;
+    
+        i{
+            margin-right: 10px;
+        }    
+    }
+
+    .fa-hands-helping{
+        font-size: 10px;
+    }
+
+    @include medium-screen{
+        flex-direction: row;
+        justify-content: space-around;
+
+        img{
+            max-width: 25%;
+        }
+        li{
+            font-size: 20px;
+        }
+    }
+
+    @include large-screen{
+         flex-direction: row;
+        justify-content: space-around;
+    
+        img{
+            max-width: 25%;
+        }
+        li{
+            font-size: 20px;
+        }
+    }  
+}
+
 
 // font-family: 'Shrikhand', cursive;
