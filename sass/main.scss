@@ -1,6 +1,7 @@
 @import "./base/settings.scss";  //root of website
 @import "./base/responsive.scss"; //import media queries
 
+@import "./layouts/loading-spinner.scss"; //import loading spinner 
 @import "./pages/home.scss"; //import scss of home page
 @import "./components/items.scss"; //import items page
 @import "./utils/mixins.scss"; //import mixins
@@ -66,25 +67,28 @@ footer{
 
     @include medium-screen{
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: center;
 
         img{
             max-width: 25%;
+            margin: auto 5%;
         }
         li{
-            font-size: 20px;
+            font-size: 18px;
         }
     }
 
     @include large-screen{
-         flex-direction: row;
-        justify-content: space-around;
+        flex-direction: row;
+        justify-content: center;
     
         img{
-            max-width: 25%;
+            max-width: 10%;
+            margin: auto 5%;
         }
+
         li{
-            font-size: 20px;
+            font-size: 16px;
         }
     }  
 }

@@ -12,6 +12,54 @@ a {
   color: inherit;
 }
 
+.loader {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  opacity: 0.9;
+  background: #ff79da;
+  background: linear-gradient(0deg, #ff79da 0%, #9356dc 38%);
+  z-index: 100;
+  animation: loader-fade 0.1s ease-out both;
+  animation-delay: 155s;
+}
+.loader span {
+  width: 35px;
+  height: 35px;
+  margin-right: 15px;
+  border-radius: 50%;
+  box-shadow: 1px 1px 6px #000;
+  background-color: #FF79DA;
+  animation: loader 0.5s cubic-bezier(0.19, 0.57, 0.3, 0.98) infinite alternate;
+  /*alternate bounce balls*/
+}
+.loader span:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.loader span:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.loader span:nth-child(4) {
+  animation-delay: 0.3s;
+}
+
+@keyframes loader-fade {
+  100% {
+    z-index: -10;
+    opacity: 0;
+  }
+}
+@keyframes loader {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100px);
+  }
+}
 .section-city-name {
   /*section for icon, name of city*/
   width: 100%;
@@ -257,7 +305,7 @@ a {
   font-size: 18px;
 }
 
-.big-button {
+.main-button {
   /*explore + order btns*/
   padding: 15px;
   color: #fff;
@@ -269,16 +317,16 @@ a {
   box-shadow: 1px 2px 6px #919090;
 }
 @media screen and (min-width: 768px) {
-  .big-button {
+  .main-button {
     max-width: 250px;
   }
 }
 @media screen and (min-width: 992px) {
-  .big-button {
+  .main-button {
     max-width: 250px;
     cursor: pointer;
   }
-  .big-button:hover {
+  .main-button:hover {
     filter: brightness(105%);
     /*button a bit brighter on hover*/
     box-shadow: 3px 4px 5px #848383;
@@ -354,25 +402,27 @@ footer .fa-hands-helping {
 @media screen and (min-width: 768px) {
   footer {
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
   }
   footer img {
     max-width: 25%;
+    margin: auto 5%;
   }
   footer li {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 @media screen and (min-width: 992px) {
   footer {
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
   }
   footer img {
-    max-width: 25%;
+    max-width: 10%;
+    margin: auto 5%;
   }
   footer li {
-    font-size: 20px;
+    font-size: 16px;
   }
 }
 
