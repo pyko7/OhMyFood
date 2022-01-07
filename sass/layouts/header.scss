@@ -1,0 +1,39 @@
+header{
+    width: 100%;
+    height: 60px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    a{
+        display: flex;
+        justify-content: center;
+    }
+
+    .fa-arrow-left{
+        display: block;
+        position: absolute;
+        top: 33%;
+        left: 5%;
+    }
+    .main-logo{
+        width: 80%;
+    }
+    
+    @include medium-screen{
+        height: 80px;
+        
+        .main-logo{
+            width: 100%;
+        }
+    }
+
+    @include large-screen{
+        height: 80px;
+   
+        .main-logo{
+            width: 100%;
+        }
+    }
+}

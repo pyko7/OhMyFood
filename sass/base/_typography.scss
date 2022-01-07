@@ -1,0 +1,226 @@
+@import "./responsive.scss"; //import media queries
+
+*{
+    font-family: 'Roboto', sans-serif;
+}
+
+header{
+    i{
+        font-size: 24px; /*left arrow in header*/
+
+        @include medium-screen{
+            font-size: 28px;
+        }
+       
+        @include large-screen{
+            font-size: 32px;
+        }
+    }
+}
+
+footer{
+    .fa-hands-helping{
+        font-size: 10px;
+    }
+
+    @include medium-screen{
+        li{
+            font-size: 18px;
+        }
+    }
+    @include large-screen{
+        li{
+            font-size: 16px;
+        }
+    }
+}
+
+//*************************HOME PAGE********************//
+
+.city-name-container{ //container of icon, name of city
+    font-size: 18px;
+    font-weight: 700;
+
+
+    @include medium-screen{
+        font-size: 20px;
+    }
+    
+    @include large-screen{
+        font-size: 20px;
+    }
+}
+
+
+.information-container{ //container for informations + explore button
+    h1{
+        font-size: 24px;
+        font-weight: 900;
+
+
+        @include medium-screen{
+            font-size: 26px;
+        }
+        @include large-screen{
+            font-size: 30px;
+        }
+    }
+    p{
+        font-size: 18px;
+
+        @include medium-screen{
+            font-size: 22px;
+        }
+        @include large-screen{
+            font-size: 26px;
+        }
+    }
+}
+
+.working-card{ //font of working cards icons
+    i{
+        font-size: 20px;
+
+        @include medium-screen{
+            font-size: 24px;
+        }
+    }
+        &:nth-child(4){
+            & i{
+                font-size: 18px;
+            @include medium-screen{
+                font-size: 20px;
+            }
+            }
+    }
+}
+
+.working-stage-title{ //workind cards titles
+    font-size: 18px;
+    font-weight: 700;
+    
+    @include medium-screen{
+        font-size: 24px;
+    }
+    
+    @include large-screen{
+        font-size: 22px;
+    }
+}
+
+.section-title{ //title of sections
+    font-size: 24px;
+
+    @include medium-screen{
+        font-size: 32px;
+    }
+    @include large-screen{
+        font-size: 32px;
+    }
+}
+
+.fa-heart{ //heart icon
+    font-size: 26px;
+
+    @include medium-screen{
+        font-size: 30px;
+    }
+    @include large-screen{
+        font-size: 30px;
+    }
+}
+
+
+.restaurant-name{
+    font-size: 20px;
+    font-weight: 700;
+
+    @include medium-screen{
+        font-size: 24px;
+    }
+    @include large-screen{
+        font-size: 24px;
+    }
+}
+
+.restaurant-district{
+    font-size: 18px;
+    
+    @include medium-screen{
+        font-size: 20px;
+    }
+    @include large-screen{
+        font-size: 20px;
+    }
+}
+
+//********************MENU PAGES************//
+
+.menu-title{
+    h1{
+        font-family: 'Shrikhand', cursive;
+        font-size: 28px;
+
+        @include medium-screen{
+            font-size: 36px;
+        }
+
+        @include large-screen{
+            font-size: 32px;
+        }
+    }
+}
+
+.menu-service{
+    h2{
+        font-size: 16px;
+        text-transform: uppercase;
+        font-weight: normal;
+
+        @include medium-screen{
+            font-size: 20px;
+        }
+
+        @include large-screen{
+            font-size: 18px;
+        }
+    }   
+}
+
+.main-food{ //name of the meal
+    font-size: 18px;
+    font-weight: 700;
+
+    @include medium-screen{
+        font-size: 24px;
+    }
+
+    @include large-screen{
+        font-size: 20px;
+    }
+}
+
+.side-food{
+    font-size: 16px;
+
+    @include medium-screen{
+        font-size: 20px;
+    }
+
+    @include large-screen{
+        font-size: 18px;
+    }
+}
+
+.meal-price{
+    font-size: 16px;
+    font-weight: 700;
+
+    @include medium-screen{
+        font-size: 20px;
+    }
+
+    @include large-screen{
+        font-size: 18px;
+    }
+}

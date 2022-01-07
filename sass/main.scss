@@ -1,98 +1,17 @@
-@import "./base/settings.scss";  //root of website
+@import "./utils/heart-gradient.scss"; //import gradient color for heart icon
+@import "./utils/service-border.scss"; //import border under service name
+
+@import "./base/reset.scss";  //reset settings of page
+@import "./base/typography.scss";  //typography of website
+@import "./base/colors.scss";  //list of colors
 @import "./base/responsive.scss"; //import media queries
 
 // @import "./layouts/loading-spinner.scss"; //import loading spinner 
+@import "./layouts/header.scss"; //import header
+@import "./layouts/footer.scss"; //import footer
+
 @import "./pages/home.scss"; //import scss of home page
-@import "./components/items.scss"; //import items page
-@import "./utils/mixins.scss"; //import mixins
+@import "./pages/menus.scss"; //import scss for menus pages
 
-
-header{
-    width: 100%;
-    height: 55px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    a{
-        display: flex;
-        justify-content: center;
-    }
-    .main-logo{
-        width: 80%;
-    }
-    
-    @include medium-screen{
-        height: 80px;
-        
-        .main-logo{
-            width: 100%;
-        }
-    }
-
-    @include large-screen{
-        height: 80px;
-    
-        .main-logo{
-            width: 100%;
-        }
-    }
-}
-
-footer{
-    width: 100%;
-    display: flex;
-    padding: 25px;
-    padding-bottom: 30px;
-    flex-direction: column;
-    background-color: #252525;
-    color: #fff;
-
-    img{
-        width: 30%;
-        margin-bottom: 15px;
-        filter: invert(1); /*put #fff color to logo*/
-    }
-
-    li{
-        margin: 10px auto;
-    
-        i{
-            margin-right: 10px;
-        }    
-    }
-
-    .fa-hands-helping{
-        font-size: 10px;
-    }
-
-    @include medium-screen{
-        flex-direction: row;
-        justify-content: center;
-
-        img{
-            max-width: 25%;
-            margin: auto 5%;
-        }
-        li{
-            font-size: 18px;
-        }
-    }
-
-    @include large-screen{
-        flex-direction: row;
-        justify-content: center;
-    
-        img{
-            max-width: 10%;
-            margin: auto 5%;
-        }
-
-        li{
-            font-size: 16px;
-        }
-    }  
-}
-
-
-// font-family: 'Shrikhand', cursive;
+@import "./components/buttons.scss"; //import buttons
+@import "./components/new-restaurant.scss"; //import card for new restaurants

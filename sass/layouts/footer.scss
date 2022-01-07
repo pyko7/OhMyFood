@@ -1,0 +1,43 @@
+footer{
+    width: 100%;
+    display: flex;
+    padding: 25px;
+    padding-bottom: 30px;
+    flex-direction: column;
+    background-color: #252525;
+    color: #fff;
+
+    img{
+        width: 30%;
+        margin-bottom: 15px;
+        filter: invert(1); /*put #fff color to logo*/
+    }
+
+    li{
+        margin: 10px auto;
+    
+        i{
+            margin-right: 10px;
+        }    
+    }
+
+    @include medium-screen{
+        flex-direction: row;
+        justify-content: center;
+
+        img{
+            max-width: 25%;
+            margin: auto 5%;
+        }
+    }
+
+    @include large-screen{
+        flex-direction: row;
+        justify-content: center;
+    
+        img{
+            max-width: 10%;
+            margin: auto 5%;
+        }
+    }  
+}

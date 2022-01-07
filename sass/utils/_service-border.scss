@@ -1,0 +1,7 @@
+@mixin service-border{
+    width: 60%;
+    height: 4px;
+    display: block;
+    background: $tertiary-color;
+    margin-top: 5px;
+}

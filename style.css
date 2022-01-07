@@ -3,7 +3,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
   list-style: none;
 }
 
@@ -12,31 +11,350 @@ a {
   color: inherit;
 }
 
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+header i {
+  font-size: 24px;
+  /*left arrow in header*/
+}
+@media screen and (min-width: 768px) {
+  header i {
+    font-size: 28px;
+  }
+}
+@media screen and (min-width: 992px) {
+  header i {
+    font-size: 32px;
+  }
+}
+
+footer .fa-hands-helping {
+  font-size: 10px;
+}
+@media screen and (min-width: 768px) {
+  footer li {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 992px) {
+  footer li {
+    font-size: 16px;
+  }
+}
+
+.city-name-container {
+  font-size: 18px;
+  font-weight: 700;
+}
+@media screen and (min-width: 768px) {
+  .city-name-container {
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .city-name-container {
+    font-size: 20px;
+  }
+}
+
+.information-container h1 {
+  font-size: 24px;
+  font-weight: 900;
+}
+@media screen and (min-width: 768px) {
+  .information-container h1 {
+    font-size: 26px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .information-container h1 {
+    font-size: 30px;
+  }
+}
+.information-container p {
+  font-size: 18px;
+}
+@media screen and (min-width: 768px) {
+  .information-container p {
+    font-size: 22px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .information-container p {
+    font-size: 26px;
+  }
+}
+
+.working-card i {
+  font-size: 20px;
+}
+@media screen and (min-width: 768px) {
+  .working-card i {
+    font-size: 24px;
+  }
+}
+.working-card:nth-child(4) i {
+  font-size: 18px;
+}
+@media screen and (min-width: 768px) {
+  .working-card:nth-child(4) i {
+    font-size: 20px;
+  }
+}
+
+.working-stage-title {
+  font-size: 18px;
+  font-weight: 700;
+}
+@media screen and (min-width: 768px) {
+  .working-stage-title {
+    font-size: 24px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .working-stage-title {
+    font-size: 22px;
+  }
+}
+
+.section-title {
+  font-size: 24px;
+}
+@media screen and (min-width: 768px) {
+  .section-title {
+    font-size: 32px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .section-title {
+    font-size: 32px;
+  }
+}
+
+.fa-heart {
+  font-size: 26px;
+}
+@media screen and (min-width: 768px) {
+  .fa-heart {
+    font-size: 30px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .fa-heart {
+    font-size: 30px;
+  }
+}
+
+.restaurant-name {
+  font-size: 20px;
+  font-weight: 700;
+}
+@media screen and (min-width: 768px) {
+  .restaurant-name {
+    font-size: 24px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .restaurant-name {
+    font-size: 24px;
+  }
+}
+
+.restaurant-district {
+  font-size: 18px;
+}
+@media screen and (min-width: 768px) {
+  .restaurant-district {
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .restaurant-district {
+    font-size: 20px;
+  }
+}
+
+.menu-title h1 {
+  font-family: "Shrikhand", cursive;
+  font-size: 28px;
+}
+@media screen and (min-width: 768px) {
+  .menu-title h1 {
+    font-size: 36px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .menu-title h1 {
+    font-size: 32px;
+  }
+}
+
+.menu-service h2 {
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+@media screen and (min-width: 768px) {
+  .menu-service h2 {
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .menu-service h2 {
+    font-size: 18px;
+  }
+}
+
+.main-food {
+  font-size: 18px;
+  font-weight: 700;
+}
+@media screen and (min-width: 768px) {
+  .main-food {
+    font-size: 24px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .main-food {
+    font-size: 20px;
+  }
+}
+
+.side-food {
+  font-size: 16px;
+}
+@media screen and (min-width: 768px) {
+  .side-food {
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .side-food {
+    font-size: 18px;
+  }
+}
+
+.meal-price {
+  font-size: 16px;
+  font-weight: 700;
+}
+@media screen and (min-width: 768px) {
+  .meal-price {
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .meal-price {
+    font-size: 18px;
+  }
+}
+
+header {
+  width: 100%;
+  height: 60px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header a {
+  display: flex;
+  justify-content: center;
+}
+header .fa-arrow-left {
+  display: block;
+  position: absolute;
+  top: 33%;
+  left: 5%;
+}
+header .main-logo {
+  width: 80%;
+}
+@media screen and (min-width: 768px) {
+  header {
+    height: 80px;
+  }
+  header .main-logo {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 992px) {
+  header {
+    height: 80px;
+  }
+  header .main-logo {
+    width: 100%;
+  }
+}
+
+footer {
+  width: 100%;
+  display: flex;
+  padding: 25px;
+  padding-bottom: 30px;
+  flex-direction: column;
+  background-color: #252525;
+  color: #fff;
+}
+footer img {
+  width: 30%;
+  margin-bottom: 15px;
+  filter: invert(1);
+  /*put #fff color to logo*/
+}
+footer li {
+  margin: 10px auto;
+}
+footer li i {
+  margin-right: 10px;
+}
+@media screen and (min-width: 768px) {
+  footer {
+    flex-direction: row;
+    justify-content: center;
+  }
+  footer img {
+    max-width: 25%;
+    margin: auto 5%;
+  }
+}
+@media screen and (min-width: 992px) {
+  footer {
+    flex-direction: row;
+    justify-content: center;
+  }
+  footer img {
+    max-width: 10%;
+    margin: auto 5%;
+  }
+}
+
 .section-city-name {
   /*section for icon, name of city*/
   width: 100%;
   padding: 15px 0;
-  background-color: #ebe9e9;
+  background-color: #e7e7e7;
   box-shadow: 0 1px 4px #c2c1c1 inset;
   /*inset for shadow inside*/
 }
 
 .city-name-container {
   /*container of icon, name of city*/
-  width: 40%;
+  width: 50%;
   display: flex;
   justify-content: center;
   margin: 0 auto;
-  font-weight: 700;
 }
-.city-name-container .fa-map-marker-alt {
+.city-name-container i {
   margin-right: 10%;
 }
 @media screen and (min-width: 768px) {
   .city-name-container {
     width: 25%;
   }
-  .city-name-container .fa-map-marker-alt {
+  .city-name-container i {
     margin-right: 5%;
   }
 }
@@ -44,7 +362,7 @@ a {
   .city-name-container {
     width: 15%;
   }
-  .city-name-container .fa-map-marker-alt {
+  .city-name-container i {
     margin-right: 5%;
   }
 }
@@ -55,7 +373,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(204, 204, 204, 0.267);
+  background-color: #f1f1f1;
 }
 
 .information-container {
@@ -69,12 +387,9 @@ a {
 }
 .information-container h1 {
   width: 70%;
-  font-size: 24px;
   margin-bottom: 10px;
-  font-weight: 900;
 }
 .information-container p {
-  font-size: 18px;
   margin-bottom: 25px;
 }
 .information-container button {
@@ -108,34 +423,31 @@ a {
 .working-card {
   width: 95%;
   margin: 25px auto;
-  padding: 20px;
+  padding: 35px 25px;
   border-radius: 15px;
   position: relative;
   display: flex;
-  justify-content: center;
   align-items: center;
   box-shadow: 1px 1px 6px #b8b8b8;
 }
 .working-card i {
   position: absolute;
-  right: 70%;
-  margin-right: 50px;
+  left: 12%;
   color: #797979;
-  font-size: 18px;
 }
 @media screen and (min-width: 768px) {
   .working-card i {
-    right: 60%;
+    left: 30%;
   }
 }
 @media screen and (min-width: 992px) {
   .working-card i {
-    right: 60%;
+    left: 35%;
   }
 }
 .working-card:nth-child(4) {
   /*select last card*/
-  background-color: rgba(204, 204, 204, 0.267);
+  background-color: #9256dc23;
 }
 .working-card:nth-child(4) i {
   color: #9356DC;
@@ -152,19 +464,35 @@ a {
 }
 
 .working-stage-title {
-  font-size: 18px;
-  font-weight: 700;
+  position: absolute;
+  left: 25%;
+}
+@media screen and (min-width: 768px) {
+  .working-stage-title {
+    left: 35%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .working-stage-title {
+    left: 40%;
+  }
 }
 
 .section-restaurant {
   width: 100%;
+}
+@media screen and (min-width: 992px) {
+  .section-restaurant {
+    margin-bottom: 50px;
+    /*space between section and footer*/
+  }
 }
 
 .restaurant-container {
   width: 100%;
   padding: 40px 20px;
   padding-bottom: 40px;
-  background: rgba(204, 204, 204, 0.267);
+  background: #f1f1f1;
 }
 .restaurant-container h1 {
   margin-bottom: 25px;
@@ -208,10 +536,6 @@ a {
   /*la note enchanté img position*/
   object-position: 50% 60%;
 }
-.restaurant-card i {
-  font-size: 26px;
-  display: block;
-}
 @media screen and (min-width: 768px) {
   .restaurant-card {
     height: 400px;
@@ -228,7 +552,7 @@ a {
     height: 500px;
   }
   .restaurant-card:hover {
-    background: rgba(204, 204, 204, 0.267);
+    background: #f1f1f1;
     box-shadow: 3px 4px 5px #848383;
   }
   .restaurant-card img {
@@ -255,13 +579,120 @@ a {
 }
 
 .restaurant-name {
-  font-size: 20px;
-  font-weight: 700;
   margin-bottom: 3px;
 }
 
-.restaurant-district {
-  font-size: 18px;
+.section-menu {
+  width: 100%;
+}
+
+.menu-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.menu-container img {
+  display: block;
+  object-fit: cover;
+}
+@media screen and (min-width: 768px) {
+  .menu-container img {
+    margin-top: -150px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .menu-container {
+    margin: 0 auto;
+    width: 50%;
+    border-radius: 30px;
+  }
+}
+
+.menu-description {
+  width: 100%;
+  padding: 20px;
+  margin-top: -12%;
+  border-radius: 30px 30px 0 0;
+  background: #f1f1f1;
+}
+@media screen and (min-width: 768px) {
+  .menu-description {
+    margin-top: -15%;
+    padding: 10px 30px 20px 30px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .menu-description {
+    padding: 20px 30px;
+  }
+}
+
+.menu-title {
+  display: flex;
+  padding-right: 20px;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+.menu-title i:hover {
+  display: block;
+  color: #9356DC;
+  font-weight: bold;
+  background: linear-gradient(0deg, #FF79DA 61%, #9356DC 96%);
+  -webkit-background-clip: text;
+  /* allows background to be clipped by a text element*/
+  -webkit-text-fill-color: transparent;
+  /*fill color of characters of text*/
+  cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+  .menu-title {
+    padding-top: 10px;
+    margin-bottom: 15px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .menu-title {
+    padding-top: 10px;
+    margin-bottom: 15px;
+  }
+}
+
+.menu-service {
+  width: 100%;
+}
+
+.service-name {
+  width: fit-content;
+}
+.service-name span {
+  width: 60%;
+  height: 4px;
+  display: block;
+  background: #99E2D0;
+  margin-top: 5px;
+}
+
+.meal-name a {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 15px;
+  padding: 15px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 1px 1px 6px #b8b8b8;
+}
+@media screen and (min-width: 992px) {
+  .meal-name a {
+    margin-top: 25px;
+  }
+}
+
+.main-food {
+  margin-bottom: 5px;
 }
 
 .main-button {
@@ -278,11 +709,13 @@ a {
 @media screen and (min-width: 768px) {
   .main-button {
     max-width: 250px;
+    font-size: 20px;
   }
 }
 @media screen and (min-width: 992px) {
   .main-button {
     max-width: 250px;
+    font-size: 20px;
     cursor: pointer;
   }
   .main-button:hover {
@@ -306,88 +739,6 @@ a {
 }
 @media screen and (min-width: 768px) {
   .new-restaurant {
-    font-size: 16px;
-  }
-}
-
-header {
-  width: 100%;
-  height: 55px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-header a {
-  display: flex;
-  justify-content: center;
-}
-header .main-logo {
-  width: 80%;
-}
-@media screen and (min-width: 768px) {
-  header {
-    height: 80px;
-  }
-  header .main-logo {
-    width: 100%;
-  }
-}
-@media screen and (min-width: 992px) {
-  header {
-    height: 80px;
-  }
-  header .main-logo {
-    width: 100%;
-  }
-}
-
-footer {
-  width: 100%;
-  display: flex;
-  padding: 25px;
-  padding-bottom: 30px;
-  flex-direction: column;
-  background-color: #252525;
-  color: #fff;
-}
-footer img {
-  width: 30%;
-  margin-bottom: 15px;
-  filter: invert(1);
-  /*put #fff color to logo*/
-}
-footer li {
-  margin: 10px auto;
-}
-footer li i {
-  margin-right: 10px;
-}
-footer .fa-hands-helping {
-  font-size: 10px;
-}
-@media screen and (min-width: 768px) {
-  footer {
-    flex-direction: row;
-    justify-content: center;
-  }
-  footer img {
-    max-width: 25%;
-    margin: auto 5%;
-  }
-  footer li {
-    font-size: 18px;
-  }
-}
-@media screen and (min-width: 992px) {
-  footer {
-    flex-direction: row;
-    justify-content: center;
-  }
-  footer img {
-    max-width: 10%;
-    margin: auto 5%;
-  }
-  footer li {
     font-size: 16px;
   }
 }

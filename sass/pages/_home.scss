@@ -2,32 +2,31 @@
 .section-city-name{ /*section for icon, name of city*/
     width: 100%;
     padding: 15px 0;
-    background-color: rgb(235, 233, 233);
+    background-color: darken($background-lighter,4);
     box-shadow: 0 1px 4px rgb(194, 193, 193) inset; /*inset for shadow inside*/
 }
 
 .city-name-container{ /*container of icon, name of city*/
-    width: 40%;
+    width: 50%;
     display: flex;
     justify-content: center;
     margin: 0 auto;
-    font-weight: 700;
 
-        .fa-map-marker-alt{
+        i{
             margin-right: 10%;
         }
 
     @include medium-screen{
         width: 25%;
 
-        .fa-map-marker-alt{
+        i{
             margin-right: 5%;
         }
     }
     @include large-screen{
         width: 15%;
      
-        .fa-map-marker-alt{
+        i{
             margin-right: 5%;
         }
     }
@@ -52,13 +51,10 @@
 
         h1{
             width: 70%;
-            font-size: 24px;
             margin-bottom: 10px;
-            font-weight: 900;
         }
 
         p{
-            font-size: 18px;
             margin-bottom: 25px;
         }
         
@@ -77,8 +73,9 @@
     padding: 40px 20px;
 
     h1{
-        margin-bottom: 25px;
+       margin-bottom: 25px; //mixin section title
     }
+    
     @include medium-screen{
         width: 90%;
         margin: 0 auto;
@@ -93,33 +90,30 @@
 .working-card{
     width: 95%;
     margin: 25px auto;
-    padding: 20px;
+    padding: 35px 25px;
     border-radius: 15px;
     position: relative;
     display: flex;
-    justify-content: center;
     align-items: center;
     box-shadow:$cards-box-shadow;
     
-        & i{
+        i{
             position: absolute;
-            right: 70%;
-            margin-right: 50px;
+            left: 12%;
             color: $icon-color;
-            font-size: 18px;
 
             @include medium-screen{
-            right: 60%;
+            left: 30%;
             }
             
             @include large-screen{
-                right: 60%;
+                left: 35%;
 
             }
         }
 
         &:nth-child(4){ /*select last card*/
-            background-color: $background-lighter;
+            background-color: $background-primary-color;
             
             & i{
                 color: $primary-color;
@@ -138,13 +132,23 @@
 }
 
 .working-stage-title{
-    font-size: 18px;
-    font-weight: 700;
+    position: absolute;
+    left: 25%;
+    @include medium-screen{
+        left: 35%;
+    }
+
+    @include medium-screen{
+        left: 40%;
+    }
 }
 
 //*****************SECTION OF RESTAURANTS*********
 .section-restaurant{
     width: 100%;
+    @include large-screen{
+        margin-bottom: 50px; /*space between section and footer*/
+    }
 }
 
 .restaurant-container{
@@ -154,7 +158,7 @@
     background: $background-lighter;
 
     h1{
-        margin-bottom: 25px;
+        margin-bottom: 25px; //mixin section title
     }
 
     @include large-screen{
@@ -195,11 +199,6 @@
         }
     }
 
-    i{
-        font-size: 26px;
-        display: block;
-    }
-
     @include medium-screen{
         height: 400px;
         img{
@@ -222,12 +221,7 @@
         }
         
         .fa-heart:hover{
-            display: block;
-            color: $primary-color;
-            font-weight: bold;
-            background: linear-gradient(0deg, $secondary-color 61%, $primary-color 96%);
-            -webkit-background-clip: text; /* allows background to be clipped by a text element*/
-            -webkit-text-fill-color: transparent; /*fill color of characters of text*/
+            @include heart-gradient;
         }
 
     }
@@ -241,11 +235,6 @@
 }
 
 .restaurant-name{
-    font-size: 20px;
-    font-weight: 700;
     margin-bottom: 3px;
 }
 
-.restaurant-district{
-    font-size: 18px;
-}
