@@ -66,31 +66,66 @@
     width: 100%;
 }
 
-.service-name{
+.service-name{ /*name of service*/
     width: fit-content;
+    margin-top: 35px;
     span{
         @include service-border;
     }
 }
 
-.meal-name{
-    a{
+.meal-card{ /*card for each meal*/
     width: 100%;
     display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    margin-top: 15px;
-    padding: 15px;
-    background: #fff;
-    border-radius: 15px;
-    box-shadow: $cards-box-shadow;
     
-        @include large-screen{
-            margin-top: 25px;
+    
+        &:hover{ /*meal check card is present on right side when hover a meal card*/
+            a{
+                border-radius: $card-radius 0 0 $card-radius;
+            }
+
+            .added-meal{
+                width: auto;
+                height: auto;
+                display: block;
+                opacity: 1;
+                margin-top: $meal-card-margin-top;
+                padding: $meal-card-padding;
+                box-shadow: $cards-box-shadow;
+                transition: opacity .1s ease-in;
+                @include meal-check-card;
+
+                @include large-screen{
+                    margin-top: 25px;
+                }
+            }
         }
+
+    a{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-top: $meal-card-margin-top;
+        padding: $meal-card-padding;
+        background: #fff;
+        border-radius: $card-radius;
+        box-shadow: $cards-box-shadow;
+
+
+            @include large-screen{
+                margin-top: 25px;
+            }
     }
 }
 
 .main-food{
     margin-bottom: 5px;
+}
+
+
+.added-meal{
+    width: 0;
+    height: 0;
+    opacity: 0;
 }

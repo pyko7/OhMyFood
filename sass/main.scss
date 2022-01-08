@@ -4,14 +4,18 @@
 @import "./base/reset.scss";  //reset settings of page
 @import "./base/typography.scss";  //typography of website
 @import "./base/colors.scss";  //list of colors
-@import "./base/responsive.scss"; //import media queries
+@import "./base/breakpoints.scss"; //import media queries
 
 // @import "./layouts/loading-spinner.scss"; //import loading spinner 
+
 @import "./layouts/header.scss"; //import header
 @import "./layouts/footer.scss"; //import footer
 
+
+@import "./components/variables"; //import variables
+@import "./components/buttons.scss"; //import buttons
+@import "./components/meal-check-card.scss"; //import check card for meals
+@import "./components/new-restaurant.scss"; //import card for new restaurants
+
 @import "./pages/home.scss"; //import scss of home page
 @import "./pages/menus.scss"; //import scss for menus pages
-
-@import "./components/buttons.scss"; //import buttons
-@import "./components/new-restaurant.scss"; //import card for new restaurants

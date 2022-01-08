@@ -1,0 +1,15 @@
+@mixin meal-check-card{
+     width: 17%;
+     color: #fff;
+     border-radius: 0 $card-radius $card-radius 0;
+     background-color: $tertiary-color;
+     font-size: 24px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+
+     @include medium-screen{
+          width: 10%;
+          font-size: 30px;
+     }
+}

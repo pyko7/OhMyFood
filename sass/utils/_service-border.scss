@@ -1,7 +1,15 @@
 @mixin service-border{
     width: 60%;
+    min-width: 40px;
     height: 4px;
     display: block;
     background: $tertiary-color;
     margin-top: 5px;
+    
+    @include medium-screen{
+        min-width: 50px;
+    }
+    @include large-screen{
+        min-width: 50px;
+    }
 }

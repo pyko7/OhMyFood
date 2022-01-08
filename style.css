@@ -331,6 +331,54 @@ footer li i {
   }
 }
 
+.main-button {
+  /*explore + order btns*/
+  padding: 15px;
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  border-radius: 25px;
+  background: #9356DC;
+  background: linear-gradient(354deg, #9356DC 2%, #9657dc 4%, #FF79DA 81%);
+  box-shadow: 1px 2px 6px #919090;
+}
+@media screen and (min-width: 768px) {
+  .main-button {
+    max-width: 250px;
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .main-button {
+    max-width: 250px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  .main-button:hover {
+    filter: brightness(105%);
+    /*button a bit brighter on hover*/
+    box-shadow: 3px 4px 5px #848383;
+  }
+}
+
+.new-restaurant {
+  /*used for new restaurants in the list*/
+  position: absolute;
+  font-size: 14px;
+  right: 20px;
+  top: 10px;
+  padding: 7px 10px;
+  border-radius: 2px;
+  background: #99E2D0;
+  color: #278870;
+  font-weight: bold;
+}
+@media screen and (min-width: 768px) {
+  .new-restaurant {
+    font-size: 16px;
+  }
+}
+
 .section-city-name {
   /*section for icon, name of city*/
   width: 100%;
@@ -664,17 +712,70 @@ footer li i {
 }
 
 .service-name {
+  /*name of service*/
   width: fit-content;
+  margin-top: 35px;
 }
 .service-name span {
   width: 60%;
+  min-width: 40px;
   height: 4px;
   display: block;
   background: #99E2D0;
   margin-top: 5px;
 }
+@media screen and (min-width: 768px) {
+  .service-name span {
+    min-width: 50px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .service-name span {
+    min-width: 50px;
+  }
+}
 
-.meal-name a {
+.meal-card {
+  /*card for each meal*/
+  width: 100%;
+  display: flex;
+}
+.meal-card:hover {
+  /*meal check card is present on right side when hover a meal card*/
+}
+.meal-card:hover a {
+  border-radius: 15px 0 0 15px;
+}
+.meal-card:hover .added-meal {
+  width: auto;
+  height: auto;
+  display: block;
+  opacity: 1;
+  margin-top: 15px;
+  padding: 15px;
+  box-shadow: 1px 1px 6px #b8b8b8;
+  transition: opacity 0.1s ease-in;
+  width: 17%;
+  color: #fff;
+  border-radius: 0 15px 15px 0;
+  background-color: #99E2D0;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (min-width: 768px) {
+  .meal-card:hover .added-meal {
+    width: 10%;
+    font-size: 30px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .meal-card:hover .added-meal {
+    margin-top: 25px;
+  }
+}
+.meal-card a {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -686,7 +787,7 @@ footer li i {
   box-shadow: 1px 1px 6px #b8b8b8;
 }
 @media screen and (min-width: 992px) {
-  .meal-name a {
+  .meal-card a {
     margin-top: 25px;
   }
 }
@@ -695,52 +796,10 @@ footer li i {
   margin-bottom: 5px;
 }
 
-.main-button {
-  /*explore + order btns*/
-  padding: 15px;
-  color: #fff;
-  font-size: 16px;
-  border: none;
-  border-radius: 25px;
-  background: #9356DC;
-  background: linear-gradient(354deg, #9356DC 2%, #9657dc 4%, #FF79DA 81%);
-  box-shadow: 1px 2px 6px #919090;
-}
-@media screen and (min-width: 768px) {
-  .main-button {
-    max-width: 250px;
-    font-size: 20px;
-  }
-}
-@media screen and (min-width: 992px) {
-  .main-button {
-    max-width: 250px;
-    font-size: 20px;
-    cursor: pointer;
-  }
-  .main-button:hover {
-    filter: brightness(105%);
-    /*button a bit brighter on hover*/
-    box-shadow: 3px 4px 5px #848383;
-  }
-}
-
-.new-restaurant {
-  /*used for new restaurants in the list*/
-  position: absolute;
-  font-size: 14px;
-  right: 20px;
-  top: 10px;
-  padding: 7px 10px;
-  border-radius: 2px;
-  background: #99E2D0;
-  color: #278870;
-  font-weight: bold;
-}
-@media screen and (min-width: 768px) {
-  .new-restaurant {
-    font-size: 16px;
-  }
+.added-meal {
+  width: 0;
+  height: 0;
+  opacity: 0;
 }
 
 /*# sourceMappingURL=style.css.map */
