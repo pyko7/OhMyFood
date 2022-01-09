@@ -59,6 +59,7 @@
         }
         
         button{
+            @include main-button;
             margin-bottom: 20px;
         }
 }

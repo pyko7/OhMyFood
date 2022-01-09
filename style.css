@@ -331,36 +331,6 @@ footer li i {
   }
 }
 
-.main-button {
-  /*explore + order btns*/
-  padding: 15px;
-  color: #fff;
-  font-size: 16px;
-  border: none;
-  border-radius: 25px;
-  background: #9356DC;
-  background: linear-gradient(354deg, #9356DC 2%, #9657dc 4%, #FF79DA 81%);
-  box-shadow: 1px 2px 6px #919090;
-}
-@media screen and (min-width: 768px) {
-  .main-button {
-    max-width: 250px;
-    font-size: 20px;
-  }
-}
-@media screen and (min-width: 992px) {
-  .main-button {
-    max-width: 250px;
-    font-size: 20px;
-    cursor: pointer;
-  }
-  .main-button:hover {
-    filter: brightness(105%);
-    /*button a bit brighter on hover*/
-    box-shadow: 3px 4px 5px #848383;
-  }
-}
-
 .new-restaurant {
   /*used for new restaurants in the list*/
   position: absolute;
@@ -441,7 +411,34 @@ footer li i {
   margin-bottom: 25px;
 }
 .information-container button {
+  /*explore + order btns*/
+  padding: 15px;
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  border-radius: 25px;
+  background: #9356DC;
+  background: linear-gradient(354deg, #9356DC 2%, #9657dc 4%, #FF79DA 81%);
+  box-shadow: 1px 2px 6px #919090;
   margin-bottom: 20px;
+}
+@media screen and (min-width: 768px) {
+  .information-container button {
+    max-width: 250px;
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .information-container button {
+    max-width: 250px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  .information-container button:hover {
+    filter: brightness(105%);
+    /*button a bit brighter on hover*/
+    box-shadow: 3px 4px 5px #848383;
+  }
 }
 
 .section-website-working {
@@ -643,9 +640,11 @@ footer li i {
 .menu-container img {
   display: block;
   object-fit: cover;
+  height: 250px;
 }
 @media screen and (min-width: 768px) {
   .menu-container img {
+    height: auto;
     margin-top: -150px;
   }
 }
@@ -673,6 +672,51 @@ footer li i {
 @media screen and (min-width: 992px) {
   .menu-description {
     padding: 20px 30px;
+  }
+}
+.menu-description button {
+  /*explore + order btns*/
+  padding: 15px;
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  border-radius: 25px;
+  background: #9356DC;
+  background: linear-gradient(354deg, #9356DC 2%, #9657dc 4%, #FF79DA 81%);
+  box-shadow: 1px 2px 6px #919090;
+  width: 50%;
+  display: block;
+  margin: 50px auto;
+  font-size: 18px;
+}
+@media screen and (min-width: 768px) {
+  .menu-description button {
+    max-width: 250px;
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .menu-description button {
+    max-width: 250px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  .menu-description button:hover {
+    filter: brightness(105%);
+    /*button a bit brighter on hover*/
+    box-shadow: 3px 4px 5px #848383;
+  }
+}
+@media screen and (min-width: 768px) {
+  .menu-description button {
+    max-width: 30%;
+    font-size: 22px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .menu-description button {
+    max-width: 35%;
+    font-size: 22px;
   }
 }
 
@@ -759,6 +803,7 @@ footer li i {
   color: #fff;
   border-radius: 0 15px 15px 0;
   background-color: #99E2D0;
+  box-shadow: 1px 1px 6px #b8b8b8;
   font-size: 24px;
   display: flex;
   align-items: center;
@@ -784,7 +829,6 @@ footer li i {
   padding: 15px;
   background: #fff;
   border-radius: 15px;
-  box-shadow: 1px 1px 6px #b8b8b8;
 }
 @media screen and (min-width: 992px) {
   .meal-card a {
