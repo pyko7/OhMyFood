@@ -659,6 +659,7 @@ footer li i {
 .menu-description {
   width: 100%;
   padding: 20px;
+  position: relative;
   margin-top: -12%;
   border-radius: 30px 30px 0 0;
   background: #f1f1f1;
@@ -796,7 +797,7 @@ footer li i {
   display: block;
   opacity: 1;
   margin-top: 15px;
-  padding: 15px;
+  padding: 15px 15px 15px 10px;
   box-shadow: 1px 1px 6px #b8b8b8;
   transition: opacity 0.1s ease-in;
   width: 17%;
@@ -821,12 +822,14 @@ footer li i {
   }
 }
 .meal-card a {
+  min-width: 0;
+  flex: 1;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   margin-top: 15px;
-  padding: 15px;
+  padding: 15px 15px 15px 10px;
   background: #fff;
   border-radius: 15px;
 }
@@ -838,6 +841,15 @@ footer li i {
 
 .main-food {
   margin-bottom: 5px;
+}
+
+.meal-description {
+  width: 80%;
+}
+.meal-description p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .added-meal {
