@@ -331,6 +331,96 @@ footer li i {
   }
 }
 
+@keyframes fadein {
+  from {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.menu-service div:nth-child(1) {
+  animation: fadein 1s;
+  animation-delay: 0.25s;
+}
+
+.menu-service div:nth-child(2) {
+  animation: fadein 1s;
+  animation-delay: 0.5s;
+}
+
+.menu-service div:nth-child(3) {
+  animation: fadein 1s;
+  animation-delay: 0.75s;
+}
+
+.menu-service div:nth-child(4) {
+  animation: fadein 1s;
+  animation-delay: 1s;
+}
+
+.menu-service div:nth-child(5) {
+  animation: fadein 1s;
+  animation-delay: 1.25s;
+}
+
+.menu-service div:nth-child(6) {
+  animation: fadein 1s;
+  animation-delay: 1.5s;
+}
+
+.menu-service div:nth-child(7) {
+  animation: fadein 1s;
+  animation-delay: 1.75s;
+}
+
+.menu-service div:nth-child(8) {
+  animation: fadein 1s;
+  animation-delay: 2s;
+}
+
+.menu-service div:nth-child(9) {
+  animation: fadein 1s;
+  animation-delay: 2.25s;
+}
+
+.menu-service div:nth-child(10) {
+  animation: fadein 1s;
+  animation-delay: 2.5s;
+}
+
+.menu-service div:nth-child(11) {
+  animation: fadein 1s;
+  animation-delay: 2.75s;
+}
+
+.menu-service div:nth-child(12) {
+  animation: fadein 1s;
+  animation-delay: 3s;
+}
+
+@keyframes appearance {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes icon-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .new-restaurant {
   /*used for new restaurants in the list*/
   position: absolute;
@@ -755,6 +845,9 @@ footer li i {
 .menu-service {
   width: 100%;
 }
+.menu-service div {
+  animation: fadein 1s;
+}
 
 .service-name {
   /*name of service*/
@@ -799,7 +892,6 @@ footer li i {
   margin-top: 15px;
   padding: 15px 15px 15px 10px;
   box-shadow: 1px 1px 6px #b8b8b8;
-  transition: opacity 0.1s ease-in;
   width: 17%;
   color: #fff;
   border-radius: 0 15px 15px 0;
@@ -809,6 +901,11 @@ footer li i {
   display: flex;
   align-items: center;
   justify-content: center;
+  animation: appearance 0.5s ease;
+  /*check icon*/
+}
+.meal-card:hover .added-meal i {
+  animation: icon-rotate 0.7s ease;
 }
 @media screen and (min-width: 768px) {
   .meal-card:hover .added-meal {
@@ -853,6 +950,7 @@ footer li i {
 }
 
 .added-meal {
+  display: none;
   width: 0;
   height: 0;
   opacity: 0;

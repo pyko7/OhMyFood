@@ -1,0 +1,21 @@
+@mixin menus-fadein {   
+    animation: fadein 1s;
+    // animation-delay: 2.5s; //pop after loader
+}
+
+@keyframes fadein{
+    from{
+        opacity: 0;
+        transform: translateY(50%);
+    }to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@for $i from 1 to 13{
+    .menu-service div:nth-child(#{$i}){
+        animation: fadein 1s;
+        animation-delay: $i *.25s
+    }
+}

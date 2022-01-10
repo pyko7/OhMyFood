@@ -86,6 +86,10 @@
 
 .menu-service{
     width: 100%;
+
+    div{
+        @include menus-fadein;
+    }
 }
 
 .service-name{ /*name of service*/
@@ -101,6 +105,7 @@
     display: flex;
     
         &:hover{ /*meal check card is present on right side when hover a meal card*/
+
             a{
                 border-radius: $card-radius 0 0 $card-radius;
             }
@@ -113,8 +118,7 @@
                 margin-top: $meal-card-margin-top;
                 padding: $meal-card-padding;
                 box-shadow: $cards-box-shadow;
-                transition: opacity .1s ease-in;
-                @include meal-check-card;
+                @include meal-check-card; /*check icon*/
 
                 @include large-screen{
                     margin-top: 25px;
@@ -122,7 +126,7 @@
             }
         }
 
-    a{
+    a{    
         min-width: 0;
         flex: 1;
         width: 100%;
@@ -156,6 +160,7 @@
 }
 
 .added-meal{
+    display: none;
     width: 0;
     height: 0;
     opacity: 0;
