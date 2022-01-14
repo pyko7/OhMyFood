@@ -1,5 +1,3 @@
-@import "./breakpoints.scss"; //import media queries
-
 *{
     font-family: 'Roboto', sans-serif;
 }
@@ -110,6 +108,7 @@ footer{
 
 .section-title{ //title of sections
     font-size: 24px;
+    font-weight: 900;
 
     @include medium-screen{
         font-size: 32px;
@@ -133,7 +132,7 @@ footer{
 
 .restaurant-name{
     font-size: 20px;
-    font-weight: 700;
+    font-weight: 900;
 
     @include medium-screen{
         font-size: 24px;
@@ -188,7 +187,7 @@ footer{
 }
 
 .main-food{ //name of the meal
-    font-size: 18px;
+    font-size: 17px;
     font-weight: 700;
 
     @include medium-screen{
@@ -201,7 +200,7 @@ footer{
 }
 
 .side-food{
-    font-size: 16px;
+    font-size: 14px;
 
     @include medium-screen{
         font-size: 20px;

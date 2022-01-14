@@ -1,0 +1,5 @@
+@for $i from 1 through 13{ /*animation for meals appearance*/
+    .meal-card:nth-child(#{$i}){
+        animation-delay: $i *.25s
+    }
+}

@@ -1,0 +1,33 @@
+//*************Breakpoints************
+$breakpoints:(
+    'medium': 768px, //tablets view
+    'large':992px, //desktop view
+);
+
+//*************Colors****************
+$primary-color: #9356DC;
+$secondary-color: #FF79DA;
+$tertiary-color: #99E2D0;
+
+
+$background-lighter: rgb(241, 241, 241);
+$background-primary-color: #9256dc23;
+
+$box-shadow: 1px 2px 6px rgb(145, 144, 144);
+$dark-box-shadow: 3px 4px 5px darken(rgb(145,144,144), 5%);
+$light-box-shadow: 3px 4px 5px lighten(rgb(145,144,144), 30%);
+$cards-box-shadow: 1px 1px 6px rgb(184, 184, 184);
+
+$icon-color: #797979;
+
+
+
+//**********Border radius************
+$card-radius: 15px; //border radius
+$meal-card-margin-top: 15px; //margin top
+$meal-card-padding: 15px 15px 15px 10px;
+
+
+//*******Animations***************
+
+$anim-appearance-speed: .5s;

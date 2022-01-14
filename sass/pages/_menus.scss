@@ -14,7 +14,11 @@
             height: 250px;
 
             @include medium-screen{
-                height: auto;
+                height: 545px;
+                margin-top: -150px;
+            }
+            @include large-screen{
+                max-height: 960px;
                 margin-top: -150px;
             }
         }
@@ -86,10 +90,6 @@
 
 .menu-service{
     width: 100%;
-
-    div{
-        @include menus-fadein;
-    }
 }
 
 .service-name{ /*name of service*/
@@ -103,9 +103,11 @@
 .meal-card{ /*card for each meal*/
     width: 100%;
     display: flex;
-    
+    opacity: 0;
+    animation: fadein $anim-appearance-speed linear; /*put animation on every meal cards*/
+    animation-fill-mode: forwards; /*allows to have opacity on 1 after animation*/
+   
         &:hover{ /*meal check card is present on right side when hover a meal card*/
-
             a{
                 border-radius: $card-radius 0 0 $card-radius;
             }
@@ -150,13 +152,17 @@
 }
 
 .meal-description{
-    width: calc(80%);
+    max-width: calc(80%);
         p{
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
         }
 
+}
+
+.meal-price{
+    padding-right: 5px;
 }
 
 .added-meal{

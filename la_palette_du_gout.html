@@ -12,18 +12,9 @@
     </head>
     
     <body>
-        <!--Loading spinner-->
-            <div class="loader">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-
         <header>
             <a href="index.html"><i class="fas fa-arrow-left"></i></a>
-            <a href="index.html"><img class="main-logo" src="./images/logo/ohmyfood@2x.svg"></a>
+            <a href="index.html"><img class="main-logo" src="./images/logo/ohmyfood@2x.svg" alt="logo"></a>
         </header>
 
         <!--Menu section-->
@@ -35,7 +26,10 @@
                     <!--Title + icon container-->
                     <div class="menu-title">
                         <h1>La palette du goût</h1>
-                        <i class="far fa-heart"></i>
+                        <div class="like-icon fa-stack">
+                            <i class="like-icon--checked fas fa-heart fa-stack-1x"></i>
+                            <i class="like-icon--unchecked far fa-heart fa-stack-1x"></i>
+                        </div>
                     </div>
                     
                     <div class="menu-service">
@@ -183,7 +177,7 @@
                                 <i class="fas fa-check-circle"></i>
                             </div>
                         </div>
-                        <button><a href="#">Commander</a></button>
+                        <button>Commander</button>
                     </div>
                 </div>
             </div>
@@ -194,7 +188,7 @@
 
         <!--Footer section-->
         <footer>
-            <img src="./images/logo/ohmyfood@2x.svg">
+            <img src="./images/logo/ohmyfood@2x.svg" alt="logo">
             <ul>
                 <li><a href="#"><i class="fas fa-utensils"></i>Proposer un restaurant</a></li>
                 <li><a href="#"><i class="fas fa-hands-helping"></i>Devenir partenaire</a></li>

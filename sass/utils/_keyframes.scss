@@ -1,0 +1,45 @@
+//**********************Loader*************************
+@keyframes loader-fade{/*animation where the loader goes behind the page*/
+     100%{
+         z-index: -10;
+         opacity: 0;
+     }
+ 
+ }
+ 
+ @keyframes loader{ /*bouncing balls animation into loader*/
+     0%{
+         transform: translateY(0);
+     }
+     100%{
+         transform: translateY(-100px);
+     }
+ }
+//****************Check icon on meal cards***********
+@keyframes check-appearance{ //animation for appearance of check card when user select meal
+    0%{
+         width: 0; //give the translate effect
+    }100%{
+         width: 10%;
+    }
+}
+
+@keyframes icon-rotate{ //rotation of check icon during appearance of check card when user select meal
+    0%{
+         transform: rotate(0deg);
+    }
+    100%{
+         transform: rotate(360deg);
+    }
+}
+
+//******************Meals appearance*************
+ @keyframes fadein{
+    from{
+        opacity: 0;
+        transform: translateY(50%);
+    }to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

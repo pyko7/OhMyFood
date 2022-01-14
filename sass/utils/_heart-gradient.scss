@@ -1,9 +1,0 @@
-@mixin heart-gradient{
-    display: block;
-    color: $primary-color;
-    font-weight: bold;
-    background: linear-gradient(0deg, $secondary-color 61%, $primary-color 96%);
-    -webkit-background-clip: text; /* allows background to be clipped by a text element*/
-    -webkit-text-fill-color: transparent; /*fill color of characters of text*/
-}
-

@@ -5,7 +5,7 @@
     border: none;
     border-radius: 25px;
     background: $primary-color;
-    background: linear-gradient(354deg, $primary-color 2%, rgba(150,87,220,1) 4%, $secondary-color 81%);
+    background: linear-gradient(354deg, $primary-color 10%, rgba(150,87,220,1) 4%, $secondary-color 100%);
     box-shadow: $box-shadow;
     
     @include medium-screen{
