@@ -47,9 +47,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    animation: check-appearance .25s ease-in;
+    animation: check-appearance .05s ease-in;
          i{
-              animation: icon-rotate .7s ease;
+              animation: icon-rotate .4s ease;
          }
 
     @include medium-screen{
