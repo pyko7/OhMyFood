@@ -1,10 +1,10 @@
-@mixin main-button{ /*explore + order btns*/
+@mixin main-button{ /*explore + order buttons*/
     padding: 15px;
     color: #fff;
     font-size: 16px;
     border: none;
     border-radius: 25px;
-    background: $primary-color;
+    background: $primary-color; /*if linear gradient isn't supported, primary color will be used as bg color*/
     background: linear-gradient(354deg, $primary-color 10%, rgba(150,87,220,1) 4%, $secondary-color 100%);
     box-shadow: $box-shadow;
     
@@ -23,3 +23,4 @@
         }
     }
 }
+

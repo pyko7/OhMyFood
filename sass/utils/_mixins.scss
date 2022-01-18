@@ -21,7 +21,7 @@
     transform: scale(0); /*give impression of filling when goes to scale(1)*/
 }
 
-@mixin service-border{ //show new restaurants to user
+@mixin service-border{ //border under service name
     width: 60%;
     min-width: 40px;
     height: 4px;

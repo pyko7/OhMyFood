@@ -457,6 +457,43 @@ footer li i {
   }
 }
 
+.loader {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  opacity: 0.9;
+  background: #ff79da;
+  background: linear-gradient(0deg, #ff79da 0%, #9356dc 38%);
+  z-index: 100;
+  /*put loader over everything else*/
+  animation: loader-fade 0.6s ease-out forwards;
+  /*forwards allows to take z-index property at 100% keyframe*/
+  animation-delay: 2.5s;
+  /*duration of the animation*/
+}
+.loader span {
+  width: 35px;
+  height: 35px;
+  margin-right: 15px;
+  border-radius: 50%;
+  box-shadow: 1px 1px 6px #000;
+  background-color: #FF79DA;
+  animation: loader 0.5s cubic-bezier(0.19, 0.57, 0.3, 0.98) infinite alternate;
+  /*alternate bounce balls*/
+}
+.loader span:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.loader span:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.loader span:nth-child(4) {
+  animation-delay: 0.3s;
+}
+
 .section-information {
   /*section with informations + explore button*/
   width: 100%;
@@ -509,13 +546,14 @@ footer li i {
   margin-bottom: 25px;
 }
 .information-container button {
-  /*explore + order btns*/
+  /*explore + order buttons*/
   padding: 15px;
   color: #fff;
   font-size: 16px;
   border: none;
   border-radius: 25px;
   background: #9356DC;
+  /*if linear gradient isn't supported, primary color will be used as bg color*/
   background: linear-gradient(354deg, #9356DC 10%, #9657dc 4%, #FF79DA 100%);
   box-shadow: 1px 2px 6px #919090;
   margin-bottom: 20px;
@@ -803,13 +841,14 @@ footer li i {
   }
 }
 .menu-description button {
-  /*explore + order btns*/
+  /*explore + order buttons*/
   padding: 15px;
   color: #fff;
   font-size: 16px;
   border: none;
   border-radius: 25px;
   background: #9356DC;
+  /*if linear gradient isn't supported, primary color will be used as bg color*/
   background: linear-gradient(354deg, #9356DC 10%, #9657dc 4%, #FF79DA 100%);
   box-shadow: 1px 2px 6px #919090;
   width: 50%;
