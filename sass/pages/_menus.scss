@@ -46,12 +46,14 @@
         padding: 20px 30px;
     }
 
-    button{
+}
+    .btn{
         @include main-button;
         width: 50%;
         display: block;
         margin: 50px auto;
         font-size: 18px;
+        text-align: center;
 
         @include medium-screen{
             max-width: 30%;
@@ -64,7 +66,6 @@
         }
     }
     
-}
 
 .menu-title{
     display: flex;
@@ -102,72 +103,85 @@
 
 .meal-card{ /*card for each meal*/
     width: 100%;
+    max-height: 72px;
     display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: $meal-card-margin-top;
+    overflow: hidden;
+    position: relative;
     opacity: 0;
-    animation: fadein $anim-appearance-speed linear; /*put animation on every meal cards*/
-    animation-fill-mode: forwards; /*allows to have opacity on 1 after animation*/
-   
+    min-width: 0;
+    flex: 1;
+    background: #fff;
+    border-radius: $card-radius;
+    cursor: pointer;
+    animation: fadein $anim-appearance-speed linear forwards; /*put animation on every meal cards -- forwards allows to have opacity on 1 after animation*/
+
+
+            @include large-screen{
+                margin-top: 25px;
+            }
         &:hover{ /*meal check card is present on right side when hover a meal card*/
             a{
                 border-radius: $card-radius 0 0 $card-radius;
             }
 
             .added-meal{
-                width: auto;
-                height: auto;
-                display: block;
-                opacity: 1;
-                margin-top: $meal-card-margin-top;
-                padding: $meal-card-padding;
-                box-shadow: $cards-box-shadow;
-                @include meal-check-card; /*check icon*/
-
+                width: 3em;
+                transition: width .5s ease;
+                
+                i{
+                    animation: icon-rotate .5s ease;
+                } 
+                
+                @include medium-screen{
+                    min-width: 3em;
+                }
                 @include large-screen{
+                    min-width: 3.3em;
                     margin-top: 25px;
                 }
             }
-        }
-
-    a{    
-        min-width: 0;
-        flex: 1;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-end;
-        margin-top: $meal-card-margin-top;
-        padding: $meal-card-padding;
-        background: #fff;
-        border-radius: $card-radius;
-
-
-            @include large-screen{
-                margin-top: 25px;
+            .meal-price{
+                transform: translateX(-250%);
+                transition: transform .5s ease;
             }
-    }
+        }
 }
 
 .main-food{
-    margin-bottom: 5px;
+    margin-bottom: 3px;
 }
 
 .meal-description{
     max-width: calc(80%);
-        p{
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 15px 15px 15px 10px;
+    margin-right: 50px;
+    p{
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
 
 }
 
 .meal-price{
-    padding-right: 5px;
+    width: fit-content;
+    position: absolute;
+    right: 15px;
+    padding-bottom:15px;
+    transition: transform .5s ease;
+
 }
 
 .added-meal{
-    display: none;
+    @include meal-check-card;
     width: 0;
-    height: 0;
-    opacity: 0;
+    height: 72px;
+    transition: width .5s ease;
+    overflow: hidden; /*hide the check icon*/
 }

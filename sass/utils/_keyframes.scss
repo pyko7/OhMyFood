@@ -4,7 +4,6 @@
          z-index: -10;
          opacity: 0;
      }
- 
  }
  
  @keyframes loader{ /*bouncing balls animation into loader*/
@@ -15,15 +14,9 @@
          transform: translateY(-100px);
      }
  }
-//****************Check icon on meal cards***********
-@keyframes check-appearance{ //animation for appearance of check card when user select meal
-    0%{
-         width: 0; //give the translate effect
-    }100%{
-         width: auto;
-    }
-}
 
+
+//****************Check icon on meal cards***********
 @keyframes icon-rotate{ //rotation of check icon during appearance of check card when user select meal
     0%{
          transform: rotate(0deg);

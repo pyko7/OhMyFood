@@ -1,46 +1,4 @@
 @charset "UTF-8";
-@keyframes loader-fade {
-  /*animation where the loader goes behind the page*/
-  100% {
-    z-index: -10;
-    opacity: 0;
-  }
-}
-@keyframes loader {
-  /*bouncing balls animation into loader*/
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-100px);
-  }
-}
-@keyframes check-appearance {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: auto;
-  }
-}
-@keyframes icon-rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-@keyframes fadein {
-  from {
-    opacity: 0;
-    transform: translateY(50%);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 /*animation for meals appearance*/
 .meal-card:nth-child(1) {
   animation-delay: 0.25s;
@@ -106,6 +64,40 @@
   animation-delay: 3.25s;
 }
 
+@keyframes loader-fade {
+  /*animation where the loader goes behind the page*/
+  100% {
+    z-index: -10;
+    opacity: 0;
+  }
+}
+@keyframes loader {
+  /*bouncing balls animation into loader*/
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100px);
+  }
+}
+@keyframes icon-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -545,7 +537,7 @@ footer li i {
 .information-container p {
   margin-bottom: 25px;
 }
-.information-container button {
+.information-container a {
   /*explore + order buttons*/
   padding: 15px;
   color: #fff;
@@ -558,22 +550,22 @@ footer li i {
   box-shadow: 1px 2px 6px #919090;
   margin-bottom: 20px;
 }
+.information-container a:hover {
+  filter: brightness(105%);
+  /*button a bit brighter on hover*/
+  box-shadow: 3px 4px 5px #848383;
+}
 @media screen and (min-width: 768px) {
-  .information-container button {
+  .information-container a {
     max-width: 250px;
     font-size: 20px;
   }
 }
 @media screen and (min-width: 992px) {
-  .information-container button {
+  .information-container a {
     max-width: 250px;
     font-size: 20px;
     cursor: pointer;
-  }
-  .information-container button:hover {
-    filter: brightness(105%);
-    /*button a bit brighter on hover*/
-    box-shadow: 3px 4px 5px #848383;
   }
 }
 
@@ -600,8 +592,7 @@ footer li i {
     margin: 0 auto;
   }
 }
-
-.working-card {
+.working-container a {
   width: 95%;
   margin: 25px auto;
   padding: 35px 25px;
@@ -612,24 +603,24 @@ footer li i {
   background: #f1f1f1;
   box-shadow: 3px 4px 5px #dddddd;
 }
-.working-card:hover {
+.working-container a:hover {
   background-color: #9256dc23;
 }
-.working-card:hover i {
+.working-container a:hover i {
   color: #9356DC;
 }
-.working-card i {
+.working-container a i {
   position: absolute;
   left: 12%;
   color: #797979;
 }
 @media screen and (min-width: 768px) {
-  .working-card i {
+  .working-container a i {
     left: 30%;
   }
 }
 @media screen and (min-width: 992px) {
-  .working-card i {
+  .working-container a i {
     left: 35%;
   }
 }
@@ -706,6 +697,10 @@ footer li i {
   flex-direction: column;
   box-shadow: 1px 1px 6px #b8b8b8;
 }
+.restaurant-card:hover {
+  background: #f1f1f1;
+  box-shadow: 3px 4px 5px #848383;
+}
 .restaurant-card img {
   display: block;
   width: 100%;
@@ -731,10 +726,6 @@ footer li i {
     width: 40%;
     margin-bottom: 50px;
     height: 500px;
-  }
-  .restaurant-card:hover {
-    background: #f1f1f1;
-    box-shadow: 3px 4px 5px #848383;
   }
   .restaurant-card img {
     height: 400px;
@@ -840,7 +831,8 @@ footer li i {
     padding: 20px 30px;
   }
 }
-.menu-description button {
+
+.btn {
   /*explore + order buttons*/
   padding: 15px;
   color: #fff;
@@ -855,33 +847,34 @@ footer li i {
   display: block;
   margin: 50px auto;
   font-size: 18px;
+  text-align: center;
+}
+.btn:hover {
+  filter: brightness(105%);
+  /*button a bit brighter on hover*/
+  box-shadow: 3px 4px 5px #848383;
 }
 @media screen and (min-width: 768px) {
-  .menu-description button {
+  .btn {
     max-width: 250px;
     font-size: 20px;
   }
 }
 @media screen and (min-width: 992px) {
-  .menu-description button {
+  .btn {
     max-width: 250px;
     font-size: 20px;
     cursor: pointer;
   }
-  .menu-description button:hover {
-    filter: brightness(105%);
-    /*button a bit brighter on hover*/
-    box-shadow: 3px 4px 5px #848383;
-  }
 }
 @media screen and (min-width: 768px) {
-  .menu-description button {
+  .btn {
     max-width: 30%;
     font-size: 22px;
   }
 }
 @media screen and (min-width: 992px) {
-  .menu-description button {
+  .btn {
     max-width: 35%;
     font-size: 22px;
   }
@@ -951,12 +944,26 @@ footer li i {
 .meal-card {
   /*card for each meal*/
   width: 100%;
+  max-height: 72px;
   display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 15px;
+  overflow: hidden;
+  position: relative;
   opacity: 0;
-  animation: fadein 0.5s linear;
-  /*put animation on every meal cards*/
-  animation-fill-mode: forwards;
-  /*allows to have opacity on 1 after animation*/
+  min-width: 0;
+  flex: 1;
+  background: #fff;
+  border-radius: 15px;
+  cursor: pointer;
+  animation: fadein 0.5s linear forwards;
+  /*put animation on every meal cards -- forwards allows to have opacity on 1 after animation*/
+}
+@media screen and (min-width: 992px) {
+  .meal-card {
+    margin-top: 25px;
+  }
 }
 .meal-card:hover {
   /*meal check card is present on right side when hover a meal card*/
@@ -965,63 +972,39 @@ footer li i {
   border-radius: 15px 0 0 15px;
 }
 .meal-card:hover .added-meal {
-  width: auto;
-  height: auto;
-  display: block;
-  opacity: 1;
-  margin-top: 15px;
-  padding: 15px 15px 15px 10px;
-  box-shadow: 1px 1px 6px #b8b8b8;
-  width: 17%;
-  color: #fff;
-  border-radius: 0 15px 15px 0;
-  background-color: #99E2D0;
-  box-shadow: 1px 1px 6px #b8b8b8;
-  font-size: 24px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  animation: check-appearance 0.05s ease-in;
-  /*check icon*/
+  width: 3em;
+  transition: width 0.5s ease;
 }
 .meal-card:hover .added-meal i {
-  animation: icon-rotate 0.4s ease;
+  animation: icon-rotate 0.5s ease;
 }
 @media screen and (min-width: 768px) {
   .meal-card:hover .added-meal {
-    width: 10%;
-    font-size: 30px;
+    min-width: 3em;
   }
 }
 @media screen and (min-width: 992px) {
   .meal-card:hover .added-meal {
+    min-width: 3.3em;
     margin-top: 25px;
   }
 }
-.meal-card a {
-  min-width: 0;
-  flex: 1;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  margin-top: 15px;
-  padding: 15px 15px 15px 10px;
-  background: #fff;
-  border-radius: 15px;
-}
-@media screen and (min-width: 992px) {
-  .meal-card a {
-    margin-top: 25px;
-  }
+.meal-card:hover .meal-price {
+  transform: translateX(-250%);
+  transition: transform 0.5s ease;
 }
 
 .main-food {
-  margin-bottom: 5px;
+  margin-bottom: 3px;
 }
 
 .meal-description {
   max-width: 80%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 15px 15px 15px 10px;
+  margin-right: 50px;
 }
 .meal-description p {
   white-space: nowrap;
@@ -1030,14 +1013,39 @@ footer li i {
 }
 
 .meal-price {
-  padding-right: 5px;
+  width: fit-content;
+  position: absolute;
+  right: 15px;
+  padding-bottom: 15px;
+  transition: transform 0.5s ease;
 }
 
 .added-meal {
-  display: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  box-shadow: 1px 1px 6px #b8b8b8;
+  border-radius: 0 15px 15px 0;
+  background-color: #99E2D0;
+  font-size: 24px;
   width: 0;
-  height: 0;
-  opacity: 0;
+  height: 72px;
+  transition: width 0.5s ease;
+  overflow: hidden;
+  /*hide the check icon*/
+}
+@media screen and (min-width: 768px) {
+  .added-meal {
+    max-width: 8%;
+    font-size: 30px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .added-meal {
+    max-width: 7%;
+    font-size: 30px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

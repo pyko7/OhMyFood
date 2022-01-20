@@ -7,7 +7,10 @@
     background: $primary-color; /*if linear gradient isn't supported, primary color will be used as bg color*/
     background: linear-gradient(354deg, $primary-color 10%, rgba(150,87,220,1) 4%, $secondary-color 100%);
     box-shadow: $box-shadow;
-    
+    &:hover{
+        filter: brightness(105%); /*button a bit brighter on hover*/
+        box-shadow: $dark-box-shadow;
+    }
     @include medium-screen{
         max-width: 250px;
         font-size: 20px;
@@ -16,11 +19,6 @@
         max-width: 250px;
         font-size: 20px;
         cursor: pointer;
-        
-        &:hover{
-            filter: brightness(105%); /*button a bit brighter on hover*/
-            box-shadow: $dark-box-shadow;
         }
-    }
 }
 
