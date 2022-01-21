@@ -33,7 +33,7 @@
     width: 100%;
     padding: 20px;
     position: relative;
-    margin-top: -12%; //~ -50px
+    margin-top: -12%; //~-50px
     border-radius: 30px 30px 0 0;
     background: $background-lighter;
 
@@ -65,7 +65,6 @@
             font-size: 22px;
         }
     }
-    
 
 .menu-title{
     display: flex;
@@ -112,7 +111,7 @@
     position: relative;
     opacity: 0;
     min-width: 0;
-    flex: 1;
+    flex: 1; /*every child will set to an equal size inside the container*/
     background: #fff;
     border-radius: $card-radius;
     cursor: pointer;
@@ -129,23 +128,22 @@
 
             .added-meal{
                 width: 3em;
-                transition: width .5s ease;
+                transition: width .5s ease; /*ease for appearance -> show faster than disappearance*/
                 
                 i{
-                    animation: icon-rotate .5s ease;
+                    animation: icon-rotate .5s ease; /*rotation of check icon*/ 
                 } 
-                
-                @include medium-screen{
-                    min-width: 3em;
-                }
-                @include large-screen{
-                    min-width: 3.3em;
-                    margin-top: 25px;
-                }
             }
             .meal-price{
-                transform: translateX(-250%);
+                transform: translateX(-250%); /*translate price on the left*/
                 transition: transform .5s ease;
+
+                @include medium-screen{
+                    transform: translateX(-250%); /*translate price on the left*/
+                }
+                @include large-screen{
+                    transform: translateX(-300%); /*translate price on the left*/
+                }
             }
         }
 }
@@ -161,12 +159,17 @@
     white-space: nowrap;
     padding: 15px 15px 15px 10px;
     margin-right: 50px;
+    @include medium-screen{
+        padding: 10px 10px 10px 10px;
+    }
+    @include large-screen{
+        padding: 10px 10px 10px 10px;
+    }
     p{
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
     }
-
 }
 
 .meal-price{
@@ -174,14 +177,13 @@
     position: absolute;
     right: 15px;
     padding-bottom:15px;
-    transition: transform .5s ease;
-
+    transition: transform .5s ease-in; /*follow the card animation*/ 
 }
 
 .added-meal{
     @include meal-check-card;
     width: 0;
     height: 72px;
-    transition: width .5s ease;
+    transition: width .5s ease-in; /*ease-in for disappearance -> show slower than appearance*/
     overflow: hidden; /*hide the check icon*/
 }

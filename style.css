@@ -327,7 +327,7 @@ footer .fa-hands-helping {
 }
 @media screen and (min-width: 768px) {
   .side-food {
-    font-size: 20px;
+    font-size: 16px;
   }
 }
 @media screen and (min-width: 992px) {
@@ -765,16 +765,18 @@ footer li i {
   /*give impression of filling when goes to scale(1)*/
   opacity: 0;
   /*invisible before hover*/
+  transition: opacity 0.2s ease-out, transform 0.2s ease-out;
+  /*empty effect when removing cursor*/
 }
 .like-icon:hover .like-icon--unchecked {
   opacity: 0;
   /*remove border of heart*/
   transition: opacity 0.2s ease-out;
+  /*fill effect when hovering*/
 }
 .like-icon:hover .like-icon--checked {
   opacity: 1;
   transform: scale(1);
-  transition: opacity 0.2s ease-out, transform 0.2s ease-out;
 }
 
 .section-menu {
@@ -954,6 +956,7 @@ footer li i {
   opacity: 0;
   min-width: 0;
   flex: 1;
+  /*every child will set to an equal size inside the container*/
   background: #fff;
   border-radius: 15px;
   cursor: pointer;
@@ -974,24 +977,28 @@ footer li i {
 .meal-card:hover .added-meal {
   width: 3em;
   transition: width 0.5s ease;
+  /*ease for appearance -> show faster than disappearance*/
 }
 .meal-card:hover .added-meal i {
   animation: icon-rotate 0.5s ease;
-}
-@media screen and (min-width: 768px) {
-  .meal-card:hover .added-meal {
-    min-width: 3em;
-  }
-}
-@media screen and (min-width: 992px) {
-  .meal-card:hover .added-meal {
-    min-width: 3.3em;
-    margin-top: 25px;
-  }
+  /*rotation of check icon*/
 }
 .meal-card:hover .meal-price {
   transform: translateX(-250%);
+  /*translate price on the left*/
   transition: transform 0.5s ease;
+}
+@media screen and (min-width: 768px) {
+  .meal-card:hover .meal-price {
+    transform: translateX(-250%);
+    /*translate price on the left*/
+  }
+}
+@media screen and (min-width: 992px) {
+  .meal-card:hover .meal-price {
+    transform: translateX(-300%);
+    /*translate price on the left*/
+  }
 }
 
 .main-food {
@@ -1006,6 +1013,16 @@ footer li i {
   padding: 15px 15px 15px 10px;
   margin-right: 50px;
 }
+@media screen and (min-width: 768px) {
+  .meal-description {
+    padding: 10px 10px 10px 10px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .meal-description {
+    padding: 10px 10px 10px 10px;
+  }
+}
 .meal-description p {
   white-space: nowrap;
   overflow: hidden;
@@ -1017,7 +1034,8 @@ footer li i {
   position: absolute;
   right: 15px;
   padding-bottom: 15px;
-  transition: transform 0.5s ease;
+  transition: transform 0.5s ease-in;
+  /*follow the card animation*/
 }
 
 .added-meal {
@@ -1031,19 +1049,18 @@ footer li i {
   font-size: 24px;
   width: 0;
   height: 72px;
-  transition: width 0.5s ease;
+  transition: width 0.5s ease-in;
+  /*ease-in for disappearance -> show slower than appearance*/
   overflow: hidden;
   /*hide the check icon*/
 }
 @media screen and (min-width: 768px) {
   .added-meal {
-    max-width: 8%;
     font-size: 30px;
   }
 }
 @media screen and (min-width: 992px) {
   .added-meal {
-    max-width: 7%;
     font-size: 30px;
   }
 }
