@@ -278,13 +278,13 @@
     &--checked{
         @include heart-gradient;
         opacity: 0; /*invisible before hover*/
-        transition: opacity .2s ease-out, transform .2s ease-out; /*empty effect when removing cursor*/
+        transition: opacity .4s ease-out, transform .4s ease-out; /*empty effect when removing cursor*/
     }
     &:hover{
         .like-icon{
             &--unchecked{
                 opacity: 0; /*remove border of heart*/
-                transition: opacity .2s ease-out; /*fill effect when hovering*/
+                transition: opacity .4s ease-out; /*fill effect when hovering*/
             }
             &--checked{
                 opacity: 1;

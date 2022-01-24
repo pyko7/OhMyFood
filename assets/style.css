@@ -765,13 +765,13 @@ footer li i {
   /*give impression of filling when goes to scale(1)*/
   opacity: 0;
   /*invisible before hover*/
-  transition: opacity 0.2s ease-out, transform 0.2s ease-out;
+  transition: opacity 0.4s ease-out, transform 0.4s ease-out;
   /*empty effect when removing cursor*/
 }
 .like-icon:hover .like-icon--unchecked {
   opacity: 0;
   /*remove border of heart*/
-  transition: opacity 0.2s ease-out;
+  transition: opacity 0.4s ease-out;
   /*fill effect when hovering*/
 }
 .like-icon:hover .like-icon--checked {
