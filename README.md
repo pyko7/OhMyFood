@@ -12,7 +12,6 @@ Ohmyfood allows users to book and compose their menus as they like. No more wait
 - [My process](#my-process)
   - [Built with](#built-with)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
 
 ## Overview
